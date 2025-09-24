@@ -258,7 +258,7 @@ public class BinaryTree {
         int leftMin = findMinHelper(node.left);
         int rightMin = findMinHelper(node.right);
         
-        return Math.min(value, Math.min(leftMin, rightMin);
+        return Math.min(value, Math.min(leftMin, rightMin));
     }
 
 
@@ -324,6 +324,6 @@ public class BinaryTree {
                 sumAndCount[1] = left[1] + right[1] + 1;
         }
 
-        return new int[]{0, 0};
+        return sumAndCount;
     }
 }
