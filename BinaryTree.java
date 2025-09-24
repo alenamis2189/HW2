@@ -276,15 +276,20 @@ public class BinaryTree {
      */
 
     private int nodesGTHelper(Node node, int val) {
-         int count = 0;
+        if (node == null) {
+            return 0;
+        }
+
+        int count = 0;
         if (node.data > val) {
-            count++;
+            count = 1;
         }
         count += nodesGTHelper(node.left, val);
         count += nodesGTHelper(node.right, val);
-    }
+
         return count;
     }
+}
 
 
     /*
